@@ -24,6 +24,5 @@ void main() {
         pos.y += WAVE_AMPLITUDE * sin(position.x + 0.35 * position.z + frameTimeCounter);
 
     gl_Position = gl_ProjectionMatrix * shadowModelView * vec4(pos, 1.0);
-	//gl_Position = ftransform();
 	gl_Position.xyz = distortShadowClipPos(gl_Position.xyz);
 }
