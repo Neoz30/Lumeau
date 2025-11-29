@@ -1,6 +1,7 @@
 #version 460 compatibility
 
 uniform sampler2D texture;
+uniform sampler2D lightmap;
 
 in vec2 texcoord;
 in vec2 lightcoord;
@@ -15,6 +16,7 @@ layout(location = 2) out vec4 encodedNormal;
 void main()
 {
     color = glcolor * texture2D(texture, texcoord);
+	color.rgb = pow(color.rgb, vec3(2.2));
 	if (color.a < 0.01)
 		discard ;
 	lightmapData = vec4(lightcoord, 0.0, 1.0);

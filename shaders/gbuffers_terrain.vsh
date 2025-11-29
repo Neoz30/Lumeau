@@ -29,5 +29,5 @@ void main()
     texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
     lightcoord = (gl_TextureMatrix[1] * gl_MultiTexCoord1).xy;
     glcolor = gl_Color;
-	normal = mat3(gbufferModelViewInverse) * (gl_NormalMatrix * gl_Normal);
+	normal = gl_Normal;
 }

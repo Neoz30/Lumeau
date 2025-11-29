@@ -1,3 +1,6 @@
+#ifndef DISTORT
+#define DISTORT
+
 const bool shadowtex0Nearest = true;
 const bool shadowtex1Nearest = true;
 const bool shadowcolor0Nearest = true;
@@ -13,3 +16,5 @@ vec3 distortShadowClipPos(vec3 shadowClipPos) {
 	shadowClipPos.z *= 0.5;
 	return shadowClipPos;
 }
+
+#endif
