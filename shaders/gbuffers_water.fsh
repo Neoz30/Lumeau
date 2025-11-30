@@ -57,7 +57,7 @@ void main()
 	vec3 specular = vec3(0.0);
 	if (shadow != 0.0)
 	{
-		vec3 viewPos = projectAndDivide(gbufferProjectionInverse, vec3(texcoord, depth) * 2.0 - 1.0);
+		//vec3 viewPos = projectAndDivide(gbufferProjectionInverse, vec3(texcoord, depth) * 2.0 - 1.0);
 		vec3 reflection = normalize(reflect(worldLightVector, normal));
 		vec3 cam2px = normalize(mat3(gbufferModelViewInverse) * viewPos - camPosition);
 		specular = vec3(pow(clamp(dot(reflection, cam2px), 0.0, 1.0), 16));
