@@ -1,0 +1,5 @@
+option.WAVE_AMPLITUDE = Wave amplitude
+option.FOG = Fog
+
+value.FOG.0 = OFF
+value.FOG.1 = ON

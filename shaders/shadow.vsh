@@ -10,7 +10,7 @@ uniform float frameTimeCounter;
 in vec2 mc_Entity;
 
 out vec2 texcoord;
-out vec4 glColor;
+out vec4 glcolor;
 
 void main() {
 	texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;

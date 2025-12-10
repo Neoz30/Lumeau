@@ -1,0 +1,5 @@
+option.WAVE_AMPLITUDE = Amplitude des vagues
+option.FOG = Brouillard
+
+value.FOG.0 = OFF
+value.FOG.1 = ON
